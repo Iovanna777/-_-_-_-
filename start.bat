@@ -48,16 +48,13 @@ if not exist .venv (
 REM Проверка, активировано ли окружение
 echo Текущая среда: %VIRTUAL_ENV% >> log.txt
 
-REM Выводим первую надпись в консоль
+REM Выводим индикаторную надпись в консоль
 echo Кот запущен, но его в темноте не видно
 
 REM Запуск Python-скрипта
-echo Запуск lesson_10_1.py... >> log.txt
-python lesson_10_1.py >> log.txt 2>&1
+echo Запуск generateYART.py... >> log.txt
+python generateYART.py >> log.txt 2>&1
 if errorlevel 1 (
-    echo Ошибка: Не удалось выполнить lesson_10_1.py >> log.txt
+    echo Ошибка: Не удалось выполнить generateYART.py >> log.txt
     exit /b 1
 )
-
-REM Выводим вторую надпись в консоль
-echo IAM TOKEN получен, но не используется
